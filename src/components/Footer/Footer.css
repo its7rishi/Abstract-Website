@@ -1,0 +1,128 @@
+.footer {
+  margin-top: 4rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  grid-template-areas:
+    "area1 area2"
+    "area3 area4"
+    "area5 area5";
+  gap: 1rem;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer li {
+  font-weight: 200;
+  color: #eee9e9;
+  font-size: 0.9rem;
+}
+.abstract,
+.resources,
+.community,
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+}
+.abstract {
+  grid-area: area1;
+}
+
+.resources {
+  grid-area: area2;
+}
+
+.community {
+  grid-area: area3;
+}
+.company {
+  grid-area: area4;
+
+  a {
+    text-decoration: none;
+    font-weight: 200;
+    color: #eee9e9;
+    font-size: 0.9rem;
+  }
+}
+.copyright {
+  grid-area: area5;
+  display: flex;
+  justify-content: flex-start;
+
+  .footer-logo {
+    font-size: 2rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+  }
+}
+
+.copyright .copy-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  font-size: 1.15rem;
+  font-weight: 300;
+  /* padding: 2rem; */
+}
+
+.copyright .copy-text .copy-logo {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 620px) {
+  .footer {
+    grid-template-areas:
+      "area1 area2 area5"
+      "area3 area4 area5"
+      "area3 area4 area5";
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .footer {
+    grid-template-areas:
+      "area1 area2"
+      "area3 area4"
+      "area5 area5";
+  }
+
+  .copyright {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    grid-template-areas: "area1 area2 area3 area4 area5";
+  }
+
+  .copyright {
+    padding-top: 12rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+  }
+  .copyright .copy-text {
+    display: flex;
+    align-items: flex-end;
+  }
+}
